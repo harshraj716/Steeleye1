@@ -29,55 +29,7 @@ const Dashboard = () => {
     setSelectedOrderDetails(order);
     setSelectedOrderTimeStamps(timestamps.results.find((item) => item["&id"] === order["&id"]));
   };
-
-// // Data
-// import mockData from "../assets/data.json";
-// import timestamps from "../assets/timeStamps.json";
-
-// // Components
-// import Dropdown from "../component/dropdown/Dropdown";
-// import HeaderTitle from "../component/header-title/HeaderTitle";
-// import Search from "../component/search/Search";
-// import List from "../component/list/List";
-// // import ListContainer from "./component/list/ListContainer";
-
-
-// // Styles
-// import styles from "./Dashboard.module.css";
-// import Card from "../component/card/Card";
-
-// const Dashboard = () => {
-//   const [currency, setCurrency] = useState("EUR");
-//   const [searchText, setSearchText] = useState("");
-//   const [selectedOrderDetails, setSelectedOrderDetails] = useState({});
-//   const [selectedOrderTimeStamps, setSelectedOrderTimeStamps] = useState({});
-
-//   const filteredRows = mockData.results.filter((row) => {
-//     const id = row["&id"].toLowerCase();
-//     const orderStatus = row.executionDetails.orderStatus.toLowerCase();
-//     const buySellIndicator = row.executionDetails.buySellIndicator.toLowerCase();
-//     const searchTextLowerCase = searchText.toLowerCase();
-  
-//     return id.includes(searchTextLowerCase) ||
-//            orderStatus.includes(searchTextLowerCase) ||
-//            buySellIndicator.includes(searchTextLowerCase);
-//   });
-
-//   const handleSelectOrder = (order) => {
-//     setSelectedOrderDetails(order);
-//     setSelectedOrderTimeStamps(timestamps.results.find((item) => item["&id"] === order["&id"]));
-
-//     // Populate the Card on top of the listing component
-//     const cardData = {
-//       buySellIndicator: order.executionDetails.buySellIndicator,
-//       orderStatus: order.executionDetails.orderStatus,
-//       orderType: order.orderType,
-//     };
-//     const card = <Card cardData={cardData} title="Selected Order Details" />;
-//     document.getElementById("card").innerHTML = card;
-//   };
-
-  return (
+return (
     <div>
       <div className={styles.header}>
         <HeaderTitle primaryTitle="Orders" secondaryTitle="6 orders" />
